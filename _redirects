@@ -1,0 +1,7 @@
+# Redirect www → non-www
+http://www.rushpayapp.com/*   https://rushpayapp.com/:splat   301!
+https://www.rushpayapp.com/*  https://rushpayapp.com/:splat   301!
+
+# Redirect Netlify subdomain → main domain
+https://rushpayapp.netlify.app/*   https://rushpayapp.com/:splat   301!
+http://rushpayapp.netlify.app/*    https://rushpayapp.com/:splat   301!
