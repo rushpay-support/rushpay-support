@@ -1,5 +1,5 @@
 # 1️⃣ Redirect non-www to www (canonical domain)
-https://www.rushpayapp.com/*    https://rushpayapp.com/:splat    301!
+# https://www.rushpayapp.com/*    https://rushpayapp.com/:splat    301!
 
 # 2️⃣ Redirect netlify.app domain to www (SEO best practice)
 https://rushpayapp.netlify.app/*    https://rushpayapp.com/:splat    301!
