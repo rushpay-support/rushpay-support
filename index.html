@@ -1,0 +1,3616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RushPay - Earn Money by Completing Simple Tasks</title>
+    <meta name="description" content="RushPay is a trusted earning app that lets you make money by completing simple tasks. Download now and start earning today with referral code 123123.">
+    <meta name="keywords" content="earn money, earning app, make money online, tasks, referral, rushpay, online income">
+    <meta name="author" content="RushPay">
+    <link rel="canonical" href="https://rushpayapp.com">
+    <meta name="robots" content="noindex, follow">
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="RushPay - Earn Money by Completing Simple Tasks">
+    <meta property="og:description" content="Realize your earning potential. Earn by doing simple tasks with RushPay.">
+    <meta property="og:image" content="https://rushpayapp.com/logo.webp">
+    <meta property="og:url" content="https://rushpayapp.com">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://rushpayapp.com/favicon.ico">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Light theme variables - Premium Blue Theme */
+            --primary-color: #1a2980;
+            --secondary-color: #26d0ce;
+            --accent-color: #ff6b35;
+            --gold-color: #ffd700;
+            --text-color: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-color: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --border-color: #e8eef3;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --gradient-primary: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FFEC8B 100%);
+            --radius: 16px;
+        }
+
+        /* Dark theme variables - Premium Gold Theme */
+        .dark-theme {
+            --primary-color: #D4AF37;
+            --secondary-color: #FFD700;
+            --accent-color: #ff8c42;
+            --gold-color: #FFD700;
+            --text-color: #f5f5f5;
+            --text-light: #b0b0b0;
+            --bg-color: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-card: #222222;
+            --border-color: #333333;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-hover: 0 15px 40px rgba(212, 175, 55, 0.2);
+            --gradient-primary: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FFEC8B 100%);
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FFEC8B 100%);
+            --bg-color: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background: var(--bg-color);
+            transition: var(--transition);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Premium Background Effect for Dark Theme */
+        .dark-theme body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(26, 26, 26, 0.95) 50%, rgba(15, 15, 15, 0.95) 100%),
+                        radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Styles - Premium Design */
+        header {
+            background-color: rgba(var(--bg-card-rgb), 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(var(--border-color), 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            z-index: 1001;
+        }
+
+        .logo-img {
+            height: 46px;
+            width: 46px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .logo-img:hover {
+            transform: rotate(-5deg) scale(1.05);
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Theme Toggle - Premium Design */
+        .theme-toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle {
+            background: var(--gradient-primary);
+            border: none;
+            width: 60px;
+            height: 32px;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .theme-toggle i {
+            position: absolute;
+            transition: var(--transition);
+            font-size: 16px;
+            z-index: 2;
+        }
+
+        .theme-toggle .fa-sun {
+            color: #ffffff;
+            left: 8px;
+            opacity: 0;
+        }
+
+        .theme-toggle .fa-moon {
+            color: #ffffff;
+            right: 8px;
+        }
+
+        .dark-theme .theme-toggle .fa-sun {
+            opacity: 1;
+        }
+
+        .dark-theme .theme-toggle .fa-moon {
+            opacity: 0;
+        }
+
+        .theme-toggle .toggle-circle {
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 4px;
+            transition: var(--transition);
+            z-index: 1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-theme .theme-toggle .toggle-circle {
+            transform: translateX(28px);
+            background: var(--gold-color);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: var(--gradient-primary);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            padding: 12px;
+            transition: var(--transition);
+            z-index: 1001;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 100vh;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.2);
+            padding: 100px 40px 40px;
+            transition: var(--transition);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            overflow-y: auto;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .mobile-nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 20px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 12px;
+            transition: var(--transition);
+            display: block;
+            border: 1px solid transparent;
+        }
+
+        .mobile-nav a:hover {
+            background: rgba(var(--primary-color), 0.1);
+            color: var(--primary-color);
+            transform: translateX(10px);
+            border-color: rgba(var(--primary-color), 0.2);
+        }
+
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section - Premium Design */
+        .hero {
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(var(--primary-color), 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-logo {
+            height: 140px;
+            width: 140px;
+            margin: 0 auto 40px;
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            animation: float 6s ease-in-out infinite;
+            border: 4px solid rgba(var(--primary-color), 0.1);
+        }
+
+        .hero-logo:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 30px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+
+        /* Premium Download Section */
+        .download-section {
+            padding: 100px 0;
+            background: var(--bg-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(var(--accent-color), 0.1) 0%, transparent 70%);
+        }
+
+        .download-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* Premium Download Button */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 22px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(106, 17, 203, 0.3);
+        }
+
+        .download-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Premium Referral Container */
+        .referral-container {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 50px 40px;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .referral-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .referral-container:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .referral-title {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        .referral-code {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .code {
+            font-family: 'Courier New', monospace;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 15px 30px;
+            border-radius: 12px;
+            letter-spacing: 3px;
+            border: 2px dashed rgba(var(--primary-color), 0.3);
+        }
+
+        /* Premium Copy Button */
+        .copy-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .message {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            display: none;
+            align-items: center;
+            gap: 15px;
+            animation: slideIn 0.5s ease-out;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Tutorial Section - Premium Design */
+        .tutorial-section {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tutorial-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(var(--secondary-color), 0.1) 0%, transparent 70%);
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .video-wrapper {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .video-wrapper:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .video-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 220px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .video-title {
+            padding: 25px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text-color);
+        }
+
+        /* Premium YouTube Button */
+        .youtube-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .youtube-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .youtube-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(255, 0, 0, 0.3);
+        }
+
+        .youtube-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Premium Support Section */
+        .support-section {
+            padding: 100px 0;
+            background: var(--bg-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(var(--accent-color), 0.1) 0%, transparent 70%);
+        }
+
+        .support-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .support-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Premium Support Card */
+        .support-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+
+        .support-card:hover {
+            transform: translateY(-10px) translateX(10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .support-card:hover::before {
+            width: 100%;
+            opacity: 0.1;
+        }
+
+        .support-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            flex-shrink: 0;
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+        }
+
+        .support-card:hover .support-icon {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .whatsapp-icon {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+
+        .telegram-icon {
+            background: linear-gradient(135deg, #0088cc 0%, #005c8a 100%);
+        }
+
+        .support-text h3 {
+            margin-bottom: 8px;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .support-text p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Premium Contact Form */
+        .contact-form {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+
+        .form-title {
+            margin-bottom: 35px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-color);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 18px 20px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            background: var(--bg-secondary);
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Premium Submit Button */
+        .submit-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            width: 100%;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Premium Trust Section */
+        .trust-section {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trust-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(var(--primary-color), 0.1) 0%, transparent 70%);
+        }
+
+        .trust-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .trust-content {
+            background: var(--bg-card);
+            padding: 60px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trust-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+
+        .trust-content:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .trust-content h2 {
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-color);
+        }
+
+        .trust-content p {
+            margin-bottom: 25px;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* Premium Blog Button */
+        .blog-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .blog-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .blog-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Premium CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: var(--gradient-primary);
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path fill="%23ffffff" fill-opacity="0.05" d="M0,0L1000,0L1000,1000L0,1000Z"/></svg>');
+            background-size: 100px;
+        }
+
+        .cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        /* Premium CTA Button */
+        .cta-button {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 20px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 220px;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.5s;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Premium Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 80px 0 30px;
+            color: var(--text-color);
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .footer-logo-img {
+            height: 50px;
+            width: 50px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-about p {
+            margin-bottom: 30px;
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .footer-links h3, .footer-contact h3 {
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-color);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 18px;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            font-size: 1rem;
+            padding: 8px 0;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(10px);
+        }
+
+        .footer-contact p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Premium Social Icon */
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .social-icon:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-8px) rotate(10deg);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .copyright a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .copyright a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        /* Responsive Design - Premium Mobile Experience */
+        @media screen and (max-width: 1200px) {
+            .container {
+                max-width: 1000px;
+                padding: 0 30px;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .container {
+                padding: 0 25px;
+            }
+            
+            .hero {
+                padding: 140px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .video-container {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            /* Mobile Navigation */
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .hero-logo {
+                height: 100px;
+                width: 100px;
+                margin-bottom: 30px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .download-btn, .youtube-btn, .blog-btn {
+                padding: 18px 35px;
+                font-size: 1.1rem;
+            }
+            
+            .code {
+                font-size: 1.8rem;
+                padding: 12px 25px;
+            }
+            
+            .copy-btn {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+            
+            .referral-container {
+                padding: 40px 30px;
+            }
+            
+            .support-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-form {
+                padding: 35px 30px;
+            }
+            
+            .trust-content {
+                padding: 50px 35px;
+            }
+            
+            .cta-title {
+                font-size: 2.2rem;
+            }
+            
+            .cta-button {
+                min-width: 100%;
+                max-width: 300px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-logo {
+                height: 80px;
+                width: 80px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .download-btn, .youtube-btn, .blog-btn {
+                padding: 16px 30px;
+                font-size: 1rem;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .referral-code {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .code {
+                font-size: 1.6rem;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .copy-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .video-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-title {
+                font-size: 1.8rem;
+            }
+            
+            .cta-section p {
+                font-size: 1.1rem;
+            }
+            
+            .mobile-nav {
+                width: 280px;
+                padding: 90px 30px 30px;
+            }
+            
+            .logo-img {
+                height: 40px;
+                width: 40px;
+            }
+            
+            .logo-text {
+                font-size: 24px;
+            }
+            
+            .footer-logo-img {
+                height: 45px;
+                width: 45px;
+            }
+            
+            .footer-logo-text {
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .referral-container {
+                padding: 35px 25px;
+            }
+            
+            .contact-form {
+                padding: 30px 25px;
+            }
+            
+            .trust-content {
+                padding: 40px 25px;
+            }
+            
+            .trust-content h2 {
+                font-size: 2rem;
+            }
+            
+            .mobile-nav {
+                width: 100%;
+            }
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background: rgba(var(--primary-color), 0.3);
+            color: var(--text-color);
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
+        }
+
+        /* Animation for elements */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gold glow effect for dark theme */
+        .dark-theme .gold-glow {
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Premium loading animation */
+        .loading-spinner {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(var(--primary-color), 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+
+        /* Earnings & Team Rebate Section */
+.earnings-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.earnings-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(var(--secondary-color), 0.05) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.earnings-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Screenshots Container */
+.screenshots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main-screenshot {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.main-screenshot:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.screenshot-frame {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--border-color);
+}
+
+.screenshot-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.screenshot-frame:hover .screenshot-img {
+    transform: scale(1.02);
+}
+
+.screenshot-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(var(--primary-color), 0.9) 0%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.screenshot-frame:hover .screenshot-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    padding: 30px;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.screenshot-frame:hover .overlay-content {
+    transform: translateY(0);
+}
+
+.overlay-content i {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.overlay-content h4 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.screenshot-label {
+    text-align: center;
+}
+
+.screenshot-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.screenshot-label h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.screenshot-label p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Secondary Screenshot */
+.secondary-screenshot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.earning-preview {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--border-color);
+}
+
+.earning-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.earning-preview:hover .earning-img {
+    transform: scale(1.05);
+}
+
+.preview-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.earning-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.stat-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.stat-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.stat-content p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Earnings Info */
+.earnings-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.info-header h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 800;
+}
+
+.info-content p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Level Cards */
+.level-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.level-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.level-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.level-header {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.level-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+}
+
+.level-1 {
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+}
+
+.level-2 {
+    background: linear-gradient(135deg, #26d0ce 0%, #1a2980 100%);
+}
+
+.level-3 {
+    background: linear-gradient(135deg, #1a2980 0%, #8a2be2 100%);
+}
+
+.dark-theme .level-1 {
+    background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%);
+}
+
+.dark-theme .level-2 {
+    background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%);
+}
+
+.dark-theme .level-3 {
+    background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+}
+
+.level-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.level-header h4 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.level-body {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.level-percentage {
+    margin-bottom: 15px;
+}
+
+.percentage-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+
+.percentage-label {
+    display: block;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.level-body p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Team Stats */
+.team-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: var(--gradient-primary);
+}
+
+.stat-card:hover .stat-value,
+.stat-card:hover .stat-label {
+    color: white;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    transition: var(--transition);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+/* Rebate Example */
+.rebate-example {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--accent-color);
+}
+
+.rebate-example h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.rebate-example h4 i {
+    color: var(--accent-color);
+}
+
+.rebate-example > p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.calculation {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.calc-step {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.calc-step:last-child {
+    border-bottom: none;
+}
+
+.calc-label {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.calc-value {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.calc-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    margin-top: 10px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.total-label {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.total-value {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.example-note {
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* CTA Actions */
+.cta-actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.btn-build-team {
+    flex: 1;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn-build-team:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.btn-learn-more {
+    flex: 1;
+    background: var(--bg-card);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.btn-learn-more:hover {
+    background: var(--gradient-primary);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .earnings-container {
+        gap: 40px;
+    }
+    
+    .level-container {
+        gap: 15px;
+    }
+    
+    .team-stats {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .earnings-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .secondary-screenshot {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .earning-stats {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .stat-item {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .earnings-section {
+        padding: 80px 0;
+    }
+    
+    .level-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .team-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+    }
+    
+    .info-card {
+        padding: 30px 25px;
+    }
+    
+    .info-header h3 {
+        font-size: 1.8rem;
+    }
+    
+    .screenshot-label h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .earnings-section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .main-screenshot {
+        padding: 20px;
+    }
+    
+    .info-card {
+        padding: 25px 20px;
+    }
+    
+    .info-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .earning-stats {
+        flex-direction: column;
+    }
+    
+    .stat-item {
+        width: 100%;
+    }
+    
+    .rebate-example {
+        padding: 25px 20px;
+    }
+}
+
+
+        /* ----------------------------------------------------------------------------------------------------- */
+        /* Three Level Image Container */
+.three-level-image-container {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    margin-top: 20px;
+}
+
+.three-level-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.image-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.image-header h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.image-header h3 i {
+    color: var(--primary-color);
+}
+
+.image-header p {
+    color: var(--text-light);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.three-level-image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid var(--border-color);
+}
+
+.three-level-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.three-level-image:hover {
+    transform: scale(1.01);
+}
+
+.image-overlay-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.level-info {
+    position: relative;
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border-left: 4px solid;
+    max-width: 200px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.level-info[data-level="1"] {
+    border-left-color: #1a2980;
+    align-self: flex-start;
+}
+
+.level-info[data-level="2"] {
+    border-left-color: #26d0ce;
+    align-self: center;
+    margin-left: 20%;
+}
+
+.level-info[data-level="3"] {
+    border-left-color: #8a2be2;
+    align-self: flex-end;
+}
+
+.dark-theme .level-info[data-level="1"] {
+    border-left-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.dark-theme .level-info[data-level="2"] {
+    border-left-color: #FFD700;
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.dark-theme .level-info[data-level="3"] {
+    border-left-color: #B8860B;
+    background: rgba(184, 134, 11, 0.1);
+}
+
+.level-info:hover {
+    transform: translateX(0) scale(1.05);
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.dark-theme .level-info:hover {
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.info-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: currentColor;
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.info-text h5 {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.info-text p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.rebate-rate {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.image-explanation {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.image-explanation p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.image-explanation strong {
+    color: var(--primary-color);
+}
+
+/* Animation for level info on hover */
+.three-level-image-wrapper:hover .level-info {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.three-level-image-wrapper:hover .level-info[data-level="1"] {
+    transition-delay: 0.1s;
+}
+
+.three-level-image-wrapper:hover .level-info[data-level="2"] {
+    transition-delay: 0.2s;
+}
+
+.three-level-image-wrapper:hover .level-info[data-level="3"] {
+    transition-delay: 0.3s;
+}
+
+/* Responsive Design for Three Level Image */
+@media screen and (max-width: 992px) {
+    .three-level-image {
+        height: 250px;
+    }
+    
+    .level-info {
+        max-width: 180px;
+        padding: 10px 12px;
+    }
+    
+    .info-text h5 {
+        font-size: 1rem;
+    }
+    
+    .info-text p {
+        font-size: 0.8rem;
+    }
+    
+    .rebate-rate {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-header h3 {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .three-level-image {
+        height: 220px;
+    }
+    
+    .image-overlay-info {
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 0;
+    }
+    
+    .level-info {
+        position: static;
+        opacity: 1;
+        transform: none;
+        max-width: 100%;
+        flex: 1;
+        min-width: 150px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+    }
+    
+    .level-info[data-level="1"],
+    .level-info[data-level="2"],
+    .level-info[data-level="3"] {
+        align-self: stretch;
+        margin-left: 0;
+    }
+    
+    .info-text h5,
+    .info-text p {
+        color: var(--text-color);
+    }
+    
+    .info-dot {
+        position: static;
+        transform: none;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    
+    .level-info:hover {
+        transform: translateY(-5px);
+        background: var(--bg-card);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .three-level-image-container {
+        padding: 25px 20px;
+    }
+    
+    .three-level-image {
+        height: 180px;
+    }
+    
+    .image-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .image-header p {
+        font-size: 0.95rem;
+    }
+    
+    .image-overlay-info {
+        flex-direction: column;
+    }
+    
+    .level-info {
+        min-width: 100%;
+    }
+    
+    .image-explanation {
+        padding: 15px;
+    }
+    
+    .image-explanation p {
+        font-size: 0.95rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- <img src="logo.webp" alt="RushPay Logo" class="logo-img"> -->
+                <span class="logo-text">RushPay</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#tutorial">Tutorial</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="theme-toggle-container">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                    <span class="toggle-circle"></span>
+                </button>
+            </div>
+            
+            <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+            <div class="mobile-nav" id="mobileNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#tutorial">Tutorial</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+                <div class="theme-toggle-container mobile-theme">
+                    <button class="theme-toggle" id="mobileThemeToggle">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-circle"></span>
+                    </button>
+                    <span>Toggle Theme</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content fade-in">
+            <img src="logo.webp" alt="RushPay App Logo" class="hero-logo">
+            <h1>Realize Your Earning Potential</h1>
+            <p>Earn money by completing simple tasks. Join thousands of users who trust RushPay for reliable income opportunities. Start earning today with our user-friendly platform.</p>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container download-container fade-in">
+            <img src="home-page.webp" alt="RushPay home page" class="screenshot-img">
+            <h2 class="section-title">Start Earning Now</h2>
+            <p class="section-subtitle">Download RushPay app today and unlock your earning potential. Use the referral code below to get bonus earnings.</p>
+            
+            <a href="https://land.rushpay.top?inviteCode=123123" class="download-btn" id="downloadBtn">
+                <i class="fas fa-download"></i> Download RushPay App
+            </a>
+            
+            <div class="referral-container gold-glow">
+                <h3 class="referral-title">Official Invite Code</h3>
+                <div class="referral-code">
+                    <div class="code">123123</div>
+                    <button class="copy-btn" id="copyBtn">
+                        <i class="far fa-copy"></i> Copy Code
+                    </button>
+                </div>
+                <p>Use this code during registration to get a sign-up bonus.</p>
+                
+                <div class="message" id="message">
+                    <i class="fas fa-check-circle"></i> Referral code copied! Use this code when registering.
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Earnings & Team Rebate Section -->
+<section class="earnings-section" id="earnings">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Multi-Level Earnings & Team Rebates</h2>
+            <p class="section-subtitle">Earn through multiple levels and get rebates from your team's earnings. The more active your team, the more you earn!</p>
+        </div>
+        
+        <div class="earnings-container">
+            <!-- Left Side: Screenshots -->
+            <div class="screenshots-container fade-in">
+                <div class="main-screenshot">
+                    <div class="screenshot-frame">
+                        <img src="screenshoot.webp" alt="RushPay App Screenshot - Team Earnings" class="screenshot-img">
+                        <div class="screenshot-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-users"></i>
+                                <h4>Team Management</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screenshot-label">
+                        <span class="screenshot-badge"><i class="fas fa-mobile-alt"></i> App Interface</span>
+                        <h3>Real-time Team Earnings Dashboard</h3>
+                        <p>Monitor your team's performance and rebates in real-time</p>
+                    </div>
+                </div>
+                
+                <div class="secondary-screenshot">
+                    <div class="earning-preview">
+                        <img src="total-earning.webp" alt="Total Earnings Overview" class="earning-img">
+                        <div class="preview-badge">
+                            <i class="fas fa-chart-line"></i> Earnings Analytics
+                        </div>
+                    </div>
+                    <div class="earning-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>3-Level System</h4>
+                                <p>Earn from 3 levels of your team</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>3% - 2% - 1%</h4>
+                                <p>Rebate percentages per level</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side: Earnings Info -->
+            <!-- <div class="earnings-info fade-in">
+                <div class="info-card">
+                    <div class="info-header">
+                        <div class="info-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3>Multi-Level Team Structure</h3>
+                    </div>
+                    <div class="info-content">
+                        <p>Build your team and earn rebates from 3 levels of referrals:</p>
+                        
+                        <div class="level-container">
+                            <div class="level-card">
+                                <div class="level-header level-1">
+                                    <span class="level-badge">Level 1</span>
+                                    <h4>Direct Referrals</h4>
+                                </div>
+                                <div class="level-body">
+                                    <div class="level-percentage">
+                                        <span class="percentage-value">3%</span>
+                                        <span class="percentage-label">Rebate</span>
+                                    </div>
+                                    <p>Earn 3% from your direct team members' earnings</p>
+                                </div>
+                            </div>
+                            
+                            <div class="level-card">
+                                <div class="level-header level-2">
+                                    <span class="level-badge">Level 2</span>
+                                    <h4>Indirect Referrals</h4>
+                                </div>
+                                <div class="level-body">
+                                    <div class="level-percentage">
+                                        <span class="percentage-value">2%</span>
+                                        <span class="percentage-label">Rebate</span>
+                                    </div>
+                                    <p>Earn 2% from your team's referrals (Level 2)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="level-card">
+                                <div class="level-header level-3">
+                                    <span class="level-badge">Level 3</span>
+                                    <h4>Extended Network</h4>
+                                </div>
+                                <div class="level-body">
+                                    <div class="level-percentage">
+                                        <span class="percentage-value">1%</span>
+                                        <span class="percentage-label">Rebate</span>
+                                    </div>
+                                    <p>Earn 1% from your extended network (Level 3)</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-stats">
+                            <div class="stat-card">
+                                <div class="stat-value">Unlimited</div>
+                                <div class="stat-label">Team Size</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">Daily</div>
+                                <div class="stat-label">Rebate Payouts</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">24/7</div>
+                                <div class="stat-label">Real-time Tracking</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- <div class="rebate-example">
+                    <h4><i class="fas fa-calculator"></i> Example Calculation</h4>
+                    <p>If your team earns $1000 in a day:</p>
+                    <div class="calculation">
+                        <div class="calc-step">
+                            <span class="calc-label">Level 1 Rebate (10%):</span>
+                            <span class="calc-value">$100</span>
+                        </div>
+                        <div class="calc-step">
+                            <span class="calc-label">Level 2 Rebate (5%):</span>
+                            <span class="calc-value">$50</span>
+                        </div>
+                        <div class="calc-step">
+                            <span class="calc-label">Level 3 Rebate (2%):</span>
+                            <span class="calc-value">$20</span>
+                        </div>
+                        <div class="calc-total">
+                            <span class="total-label">Your Total Rebate:</span>
+                            <span class="total-value">$170</span>
+                        </div>
+                    </div>
+                    <p class="example-note">This is in addition to your personal task earnings!</p>
+                </div>
+                
+                <div class="cta-actions">
+                    <button class="btn-build-team" id="buildTeamBtn">
+                        <i class="fas fa-user-plus"></i> Start Building Your Team
+                    </button>
+                    <a href="#tutorial" class="btn-learn-more">
+                        <i class="fas fa-play-circle"></i> Watch Team Building Tutorial
+                    </a>
+                </div> -->
+
+                <!-- Three Level Team Structure Image -->
+                <div class="three-level-image-container fade-in">
+                    <div class="image-header">
+                        <h3>
+                            <i class="fas fa-project-diagram"></i>
+                            3-Level Team Structure
+                        </h3>
+                        <p>
+                            Understand how your team grows and earns across three levels
+                        </p>
+                    </div>
+
+                    <div class="three-level-image-wrapper">
+                        <img src="threelevel.webp"
+                             alt="Three Level Team Structure"
+                             class="three-level-image">
+                    </div>
+
+                    <div class="image-explanation">
+                        <p>
+                            <strong>How it works:</strong>
+                            Direct referrals are Level 1, their referrals are Level 2,
+                            and the next layer becomes Level 3 — you earn from all three!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Tutorial Section -->
+    <section class="tutorial-section" id="tutorial">
+        <div class="container fade-in">
+            <h2 class="section-title">How to Use RushPay</h2>
+            <p class="section-subtitle">Watch these tutorial videos to maximize your earnings with RushPay.</p>
+            
+            <!-- <div class="video-container">
+                <div class="video-wrapper">
+                    <div class="video-placeholder">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="video-title">Getting Started with RushPay</div>
+                </div>
+                
+                <div class="video-wrapper">
+                    <div class="video-placeholder">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="video-title">How to Complete Tasks & Earn</div>
+                </div>
+                
+                <div class="video-wrapper">
+                    <div class="video-placeholder">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="video-title">Withdraw Your Earnings</div>
+                </div>
+            </div> -->
+            <div class="video-container">
+    <div class="video-wrapper">
+        <div class="video-placeholder">
+            <iframe
+                src="https://www.youtube.com/embed/TKIIeXyXXmc"
+                title="Getting Started with RushPay"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-title">
+            Getting Started with RushPay
+        </div>
+    </div>
+</div>
+
+            
+            <a href="https://youtube.com/@rushpay4?si=-QMwtYSWvczpJjZt" target="_blank" class="youtube-btn">
+                <i class="fab fa-youtube"></i> See All Tutorials
+            </a>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section" id="support">
+        <div class="container support-container fade-in">
+            <div class="support-channels">
+                <h2 class="section-title">Get Support</h2>
+                <p class="section-subtitle">Connect with our community and get help when you need it.</p>
+                
+                <!-- <a href="https://wa.me/1234567890" target="_blank" class="support-card">
+                    <div class="support-icon whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="support-text">
+                        <h3>WhatsApp Support</h3>
+                        <p>Get direct help from our support team</p>
+                    </div>
+                </a> -->
+                
+                <a href="https://t.me/Rushpay4" target="_blank" class="support-card">
+                    <div class="support-icon telegram-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="support-text">
+                        <h3>Telegram</h3>
+                        <p>Direct contact</p>
+                    </div>
+                </a>
+
+                <a href="https://t.me/RushPay123123" target="_blank" class="support-card">
+                    <div class="support-icon telegram-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="support-text">
+                        <h3>Telegram</h3>
+                        <p>For support</p>
+                    </div>
+                </a>
+
+                <a href="https://t.me/Smaartincome" target="_blank" class="support-card">
+                    <div class="support-icon telegram-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="support-text">
+                        <h3>Telegram</h3>
+                        <p>Update and Information</p>
+                    </div>
+                </a>
+                
+                <!-- <a href="https://chat.whatsapp.com/invite/example" target="_blank" class="support-card">
+                    <div class="support-icon whatsapp-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="support-text">
+                        <h3>WhatsApp Group</h3>
+                        <p>Join our community of earners</p>
+                    </div>
+                </a> -->
+            </div>
+            
+            <div class="contact-form gold-glow">
+                <h2 class="form-title">Contact Us</h2>
+                <!-- <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="messageText" class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                    </button>
+                </form> -->
+                <!-- <form id="contactForm">
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="name" required>
+    </div>
+
+    <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+    </div>
+
+    <div class="form-group">
+        <label>Your Message</label>
+        <textarea id="message" required></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+</form> -->
+
+                <form id="contactForm">
+    <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Mobile Number</label>
+        <input type="tel" id="email" class="form-control"
+               placeholder="Enter your mobile number"
+               pattern="[0-9]{10}"
+               required>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="messageText" class="form-control" rows="4"
+                  placeholder="How can we help you?" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">
+        <i class="fas fa-envelope"></i> Send
+    </button>
+</form>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section" id="blog">
+        <div class="container trust-container fade-in">
+            <div class="trust-content gold-glow">
+                <h2>Is RushPay Trustworthy?</h2>
+                <p>Many users ask: "Is this app trustable? Can I really earn money with it?" The answer is yes! RushPay is a legitimate earning platform with thousands of satisfied users worldwide.</p>
+                <p>We provide transparent payment proofs and have a track record of timely withdrawals. Our users have earned thousands of dollars by completing simple tasks on our platform.</p>
+                <p>To learn more about our legitimacy and read user testimonials, check out our detailed blog post.</p>
+                
+                <a href="https://smaartincomesource.blogspot.com/2026/02/rushpay-kya-hai-rushpay-se-paisa-kaise.html" target="_blank" class="blog-btn">
+                    <i class="fas fa-newspaper"></i> Read Our Blog Post
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-container fade-in">
+            <h2 class="cta-title">Ready to Start Your Earning Journey?</h2>
+            <p>Join RushPay today and start earning money by completing simple tasks. Everything you need is right here.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://land.rushpay.top?inviteCode=123123" class="cta-button" id="ctaDownloadBtn">
+                    <i class="fas fa-download"></i> Download RushPay
+                </a>
+                
+                <button class="cta-button" id="ctaCopyBtn">
+                    <i class="far fa-copy"></i> Copy Referral Code
+                </button>
+                
+                <!-- <a href="https://wa.me/1234567890" target="_blank" class="cta-button">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Support
+                </a> -->
+                
+                <a href="https://t.me/Rushpay4" target="_blank" class="cta-button">
+                    <i class="fab fa-telegram"></i> Telegram (Direct Support)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="logo.webp" alt="RushPay Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">RushPay</span>
+                    </div>
+                    <p>RushPay is a trusted earning platform that allows users to make money by completing simple tasks. Join our community and start earning today.</p>
+                    
+                    <!-- <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div> -->
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#tutorial">Tutorial</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div class="footer-contact">
+                    <h3>Contact Info</h3> -->
+                    <!-- <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, City, Country</p>
+                    <p><i class="fas fa-envelope"></i> support@rushpayapp.com</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p> -->
+                    <!-- <p><i class="fas fa-globe"></i> https://rushpayapp.com</p>
+                </div> -->
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 RushPay. All rights reserved. | Developed by<a href="https://jitendrapatra.com"> Jitendra Patra</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+        }
+        
+        const toggleTheme = () => {
+            body.classList.toggle('dark-theme');
+            const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+        };
+        
+        themeToggle.addEventListener('click', toggleTheme);
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        
+        const toggleMobileMenu = () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            mobileNavOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        };
+        
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        mobileNavOverlay.addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileNav.classList.remove('active');
+                mobileNavOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Copy Referral Code
+        const copyBtn = document.getElementById('copyBtn');
+        const ctaCopyBtn = document.getElementById('ctaCopyBtn');
+        const message = document.getElementById('message');
+        
+        const copyReferralCode = () => {
+            const referralCode = '123123';
+            navigator.clipboard.writeText(referralCode)
+                .then(() => {
+                    // Show success message
+                    message.style.display = 'flex';
+                    message.style.animation = 'slideIn 0.5s ease-out';
+                    
+                    // Change button text temporarily
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    copyBtn.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
+                    
+                    // Hide message after 3 seconds
+                    setTimeout(() => {
+                        message.style.display = 'none';
+                    }, 3000);
+                    
+                    // Reset button after 2 seconds
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                        copyBtn.style.background = '';
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    alert('Failed to copy referral code. Please copy it manually: ' + referralCode);
+                });
+        };
+        
+        copyBtn.addEventListener('click', copyReferralCode);
+        ctaCopyBtn.addEventListener('click', copyReferralCode);
+        
+        // Download Button with Referral Message
+        const downloadBtn = document.getElementById('downloadBtn');
+        const ctaDownloadBtn = document.getElementById('ctaDownloadBtn');
+        
+        const handleDownload = (e) => {
+            e.preventDefault();
+            
+            // Copy referral code first
+            const referralCode = '123123';
+            navigator.clipboard.writeText(referralCode)
+                .then(() => {
+                    // Show custom message on button
+                    const originalText = downloadBtn.innerHTML;
+                    const originalCtaText = ctaDownloadBtn.innerHTML;
+                    
+                    downloadBtn.innerHTML = '<i class="fas fa-check"></i> Referral Code Copied!';
+                    downloadBtn.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
+                    
+                    ctaDownloadBtn.innerHTML = '<i class="fas fa-check"></i> Referral Code Copied!';
+                    ctaDownloadBtn.style.background = 'rgba(76, 175, 80, 0.3)';
+                    
+                    // Show notification
+                    message.style.display = 'flex';
+                    message.style.animation = 'slideIn 0.5s ease-out';
+                    
+                    // Redirect after 3 seconds
+                    setTimeout(() => {
+                        window.location.href = 'https://land.rushpay.top?inviteCode=123123';
+                    }, 3000);
+                    
+                    // Hide notification after 3 seconds
+                    setTimeout(() => {
+                        message.style.display = 'none';
+                    }, 3000);
+                    
+                    // Reset buttons after 5 seconds
+                    setTimeout(() => {
+                        downloadBtn.innerHTML = originalText;
+                        downloadBtn.style.background = '';
+                        ctaDownloadBtn.innerHTML = originalCtaText;
+                        ctaDownloadBtn.style.background = '';
+                    }, 5000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    window.location.href = 'https://play.google.com/store/apps/details?id=com.rushpay.app';
+                });
+        };
+        
+        downloadBtn.addEventListener('click', handleDownload);
+        ctaDownloadBtn.addEventListener('click', handleDownload);
+        
+        // Contact Form Submission
+        // const contactForm = document.getElementById('contactForm');
+        
+        // contactForm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
+            
+        //     const name = document.getElementById('name').value;
+        //     const email = document.getElementById('email').value;
+        //     const messageText = document.getElementById('messageText').value;
+            
+        //     // Format WhatsApp message
+        //     const whatsappMessage = `Hello RushPay Support!%0A%0AMy name is: ${name}%0AMy email is: ${email}%0A%0AMy message:%0A${messageText}`;
+            
+        //     // Open WhatsApp in new tab
+        //     window.open(`https://wa.me/1234567890?text=${whatsappMessage}`, '_blank');
+            
+        //     // Reset form with animation
+        //     contactForm.style.opacity = '0.5';
+        //     contactForm.style.transform = 'translateY(10px)';
+            
+        //     setTimeout(() => {
+        //         contactForm.reset();
+        //         contactForm.style.opacity = '1';
+        //         contactForm.style.transform = 'translateY(0)';
+        //     }, 300);
+        // });
+
+//         document.getElementById("contactForm").addEventListener("submit", function (e) {
+//     e.preventDefault();
+
+//     const name = document.getElementById("name").value;
+//     const mobile = document.getElementById("mobile").value;
+//     const message = document.getElementById("message").value;
+
+//     const subject = "New Contact Request – RushPay";
+//     const body =
+// `Hello RushPay Team,
+
+// You have received a new contact request from your website.
+
+// Name: ${name}
+// Mobile Number: ${mobile}
+
+// Message:
+// ${message}
+
+// Regards,
+// RushPay Website`;
+
+//     const mailtoLink = `mailto:rushpay0@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+//     window.location.href = mailtoLink;
+// });
+
+        
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const mobile = document.getElementById("email").value; // reused safely
+    const message = document.getElementById("messageText").value;
+
+    const subject = "New Contact Request – RushPay";
+    const body =
+`Hello RushPay Team,
+
+You have received a new contact request from your website.
+
+Name: ${name}
+Mobile Number: ${mobile}
+
+Message:
+${message}
+
+Regards,
+RushPay Website`;
+
+    window.location.href =
+        "mailto:rushpay0@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+});
+
+
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation to elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Add hover sound effect for premium feel
+        const buttons = document.querySelectorAll('button, a');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = button.style.transform || '';
+            });
+        });
+        
+        // Initialize theme based on system preference if no saved preference
+        if (!localStorage.getItem('theme')) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                if (e.matches) {
+                    body.classList.add('dark-theme');
+                } else {
+                    body.classList.remove('dark-theme');
+                }
+            }
+        });
+
+        // JavaScript for Earnings Section
+document.addEventListener('DOMContentLoaded', function() {
+    // Build Team Button Animation
+    const buildTeamBtn = document.getElementById('buildTeamBtn');
+    
+    if (buildTeamBtn) {
+        buildTeamBtn.addEventListener('click', function() {
+            // Animate button click
+            this.style.transform = 'scale(0.95)';
+            
+            // Copy referral code first
+            const referralCode = '123123';
+            navigator.clipboard.writeText(referralCode)
+                .then(() => {
+                    // Change button text temporarily
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i> Referral Copied! Build Your Team';
+                    this.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
+                    
+                    // Show notification
+                    showNotification('Referral code copied! Share it to build your team.');
+                    
+                    // Redirect to download after 2 seconds
+                    setTimeout(() => {
+                        window.location.href = '#download';
+                    }, 2000);
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.style.background = '';
+                        this.style.transform = '';
+                    }, 3000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    showNotification('Failed to copy referral code. Please copy it manually.');
+                });
+        });
+    }
+    
+    // Show notification function
+    function showNotification(message) {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.innerHTML = `
+            <i class="fas fa-check-circle"></i>
+            <span>${message}</span>
+        `;
+        
+        // Add styles
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 10000;
+            animation: slideInRight 0.3s ease-out;
+        `;
+        
+        // Add animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Add to document
+        document.body.appendChild(notification);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+            notification.style.animation = 'slideOutRight 0.3s ease-out';
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 3000);
+    }
+    
+    // Add hover effect to level cards
+    const levelCards = document.querySelectorAll('.level-card');
+    levelCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});
+    </script>
+</body>
+</html>
