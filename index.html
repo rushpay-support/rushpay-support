@@ -8,7 +8,7 @@
 
     <!-- SEO Meta -->
     <meta name="description" content="RushPay is a trusted earning app that lets you make money by completing simple tasks. Start earning today.">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://rushpayapp.com">
 
     <!-- Open Graph -->
@@ -2712,6 +2712,254 @@
     padding-top: 20px !important;
 }
 
+
+
+
+        /* --- video wrapper with sound toggle --- */
+.three-level-video-wrapper {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-secondary);
+    padding: 8px;
+    margin-bottom: 30px;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.three-level-video-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.three-level-video {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    border-radius: calc(var(--radius) - 4px);
+    background: #000;
+}
+
+/* custom sound toggle button */
+.video-sound-toggle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.video-sound-toggle:hover {
+    transform: scale(1.15);
+    background: rgba(212, 175, 55, 0.9);
+    border-color: white;
+    color: #000;
+}
+
+.video-sound-toggle i {
+    pointer-events: none;
+}
+
+/* video hint - adjusted position to avoid overlap */
+.video-hint {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 40px;
+    border: 1px solid rgba(255,255,255,0.2);
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.three-level-video-wrapper:hover .video-hint {
+    background: rgba(212, 175, 55, 0.8);
+    color: #000;
+}
+
+/* mission explanation (unchanged from previous, but included for completeness) */
+.mission-explanation {
+    background: rgba(66, 209, 245, 0.2);
+    color: #1a1a1a;
+    border-radius: var(--radius);
+    padding: 40px 35px;
+    border-left: 6px solid var(--accent-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-theme .mission-explanation {
+    background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+    border-left: 6px solid var(--gold-color);
+    color: #f0f0f0;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
+}
+
+.mission-explanation p {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    margin: 0 0 15px 0;
+    font-weight: 450;
+    color: inherit;
+    position: relative;
+    z-index: 2;
+}
+
+.mission-explanation strong {
+    font-weight: 800;
+    background: linear-gradient(135deg, #b2452e, #e04e2e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.dark-theme .mission-explanation strong {
+    background: linear-gradient(135deg, #ffd966, #ffe69b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.quote-mark {
+    font-size: 4rem;
+    font-family: serif;
+    line-height: 0.8;
+    color: rgba(255, 107, 53, 0.3);
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.dark-theme .quote-mark {
+    color: rgba(255, 215, 0, 0.3);
+}
+
+.mission-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    border-top: 1px dashed rgba(255,107,53,0.3);
+    padding-top: 20px;
+}
+
+.dark-theme .mission-footer {
+    color: var(--gold-color);
+    border-top-color: rgba(212,175,55,0.3);
+}
+
+.mission-footer i {
+    font-size: 1.8rem;
+    opacity: 0.9;
+}
+
+/* responsive adjustments */
+@media screen and (max-width: 768px) {
+    .mission-explanation p {
+        font-size: 1.15rem;
+    }
+    .quote-mark {
+        font-size: 2.8rem;
+    }
+    .mission-footer {
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+    .three-level-video {
+        max-height: 280px;
+    }
+    .video-sound-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 15px;
+        left: 15px;
+    }
+    .video-hint {
+        bottom: 15px;
+        right: 15px;
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .mission-explanation {
+        padding: 30px 20px;
+    }
+    .mission-explanation p {
+        font-size: 1.05rem;
+    }
+    .quote-mark {
+        font-size: 2.2rem;
+    }
+}
+
+
+
+/* Footer Social Icons - Proper Alignment */
+footer .social-icons {
+    display: flex;
+    justify-content: center;   /* Center horizontally */
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0 30px;       /* Space above and below */
+    flex-wrap: wrap;           /* Responsive wrap */
+}
+
+/* Social Icon Box */
+footer .social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    font-size: 20px;
+}
+
+/* Hover Effect */
+footer .social-icon:hover {
+    background: var(--gradient-primary);
+    color: white;
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: var(--shadow-hover);
+}
+
+        
+
     </style>
 </head>
 <body>
@@ -2841,7 +3089,7 @@
                             <i class="fas fa-chart-line"></i> Earnings Analytics
                         </div>
                     </div>
-                    <div class="earning-stats">
+                    <!-- <div class="earning-stats">
                         <div class="stat-item">
                             <div class="stat-icon">
                                 <i class="fas fa-layer-group"></i>
@@ -2859,7 +3107,7 @@
                                 <h4>3% - 2% - 1%</h4>
                                 <p>Rebate percentages per level</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -2970,32 +3218,54 @@
                     </a>
                 </div> -->
 
-                <!-- Three Level Team Structure Image -->
-                <div class="three-level-image-container fade-in">
-                    <div class="image-header">
-                        <h3>
-                            <i class="fas fa-project-diagram"></i>
-                            3-Level Team Structure
-                        </h3>
-                        <p>
-                            Understand how your team grows and earns across three levels
-                        </p>
-                    </div>
+                <!-- ===== REPLACEMENT BLOCK: AUTOPLAY MUTED VIDEO + SOUND TOGGLE ===== -->
+<div class="three-level-image-container fade-in">
+    <div class="image-header">
+        <h3>
+            <i class="fas fa-play-circle"></i>
+            Mission RushPay – Watch & Join
+        </h3>
+        <p>
+            We are shaping individuals who think bigger 🧠, act smarter 🎯, and build stronger networks 🤝 — not just for today ⏳, but for long-term impact 🚀📈.
+        </p>
+    </div>
 
-                    <div class="three-level-image-wrapper">
-                        <img src="threelevel.webp"
-                             alt="Three Level Team Structure"
-                             class="three-level-image">
-                    </div>
+    <!-- video wrapper with custom sound control -->
+    <div class="three-level-video-wrapper" id="missionVideoWrapper">
+        <!-- video element: autoplay, muted, loop (optional, but adds polish) -->
+        <video class="three-level-video" id="missionVideo" autoplay muted loop playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag. Please download the video.
+        </video>
+        
+        <!-- custom sound toggle button (appears over video) -->
+        <button class="video-sound-toggle" id="videoSoundToggle" aria-label="unmute">
+            <i class="fas fa-volume-mute"></i>
+        </button>
+        
+        <!-- subtle hint (optional, kept from previous) -->
+        <div class="video-hint">
+            <i class="fas fa-volume-up"></i> click speaker to hear
+        </div>
+    </div>
 
-                    <div class="image-explanation">
-                        <p>
-                            <strong>How it works:</strong>
-                            Direct referrals are Level 1, their referrals are Level 2,
-                            and the next layer becomes Level 3 — you earn from all three!
-                        </p>
-                    </div>
-                </div>
+    <!-- inspirational text block -->
+    <div class="mission-explanation">
+        <p>
+            <span class="quote-mark">“</span>
+            <strong>A Mission Beyond Success: Join the RushPay Movement! 🌟</strong><br>
+            At RushPay, we believe that true growth isn't just about personal gain — 
+            it’s about lifting others as we climb. We aren't just a platform; we are 
+            a community-driven force dedicated to creating a better Samaj (society) 
+            and a stronger India.
+            <span class="quote-mark">”</span>
+        </p>
+        <div class="mission-footer">
+            <i class="fas fa-hand-holding-heart"></i> 
+            <span>#RushPayForIndia  #TogetherWeRise</span>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>
@@ -3226,58 +3496,57 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <img src="logo.webp" alt="RushPay Logo" class="footer-logo-img">
-                        <span class="footer-logo-text">RushPay</span>
-                    </div>
-                    <p>RushPay is a trusted earning platform that allows users to make money by completing simple tasks. Join our community and start earning today.</p>
-                    
-                    <!-- <div class="social-icons">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div> -->
-                </div>
-                
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#download">Download</a></li>
-                        <li><a href="#tutorial">Tutorial</a></li>
-                        <li><a href="#support">Support</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <!-- <div class="footer-contact">
-                    <h3>Contact Info</h3> -->
-                    <!-- <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, City, Country</p>
-                    <p><i class="fas fa-envelope"></i> support@rushpayapp.com</p>
-                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p> -->
-                    <!-- <p><i class="fas fa-globe"></i> https://rushpayapp.com</p>
-                </div> -->
-            </div>
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        
+        <div class="footer-container">
             
-            <div class="copyright">
-                <p>&copy; 2026 RushPay. All rights reserved. </p>
-                    <!-- | Developed by<a href="https://jitendrapatra.com"> Jitendra Patra</a> -->
+            <!-- About Section -->
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="logo.webp" alt="RushPay Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">RushPay</span>
+                </div>
+
+                <p>
+                    RushPay is a trusted earning platform that allows users to make money by completing simple tasks. 
+                    Join our community and start earning today.
+                </p>
             </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#tutorial">Tutorial</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
         </div>
-    </footer>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/rushpayapp?igsh=MWp3YzN3eGlpMHd4Ng==" class="social-icon" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://t.me/Rushpay4" target="_blank" class="social-icon" aria-label="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2026 RushPay. All rights reserved.</p>
+        </div>
+
+    </div>
+</footer>
 
     <script>
         // Theme Toggle
@@ -3685,6 +3954,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+        (function() {
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('missionVideo');
+        const soundToggle = document.getElementById('videoSoundToggle');
+        
+        // Exit if elements not found (safety)
+        if (!video || !soundToggle) return;
+
+        // Ensure video is muted and autoplay works
+        video.muted = true;
+        
+        // Attempt to play (handles browser autoplay policies)
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                // Autoplay was prevented – we can optionally show a message
+                console.log("Autoplay prevented, user interaction needed");
+                // Could add a small "play" button, but we keep the existing toggle
+            });
+        }
+
+        // Toggle sound on button click
+        soundToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            if (video.muted) {
+                // Unmute
+                video.muted = false;
+                soundToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                soundToggle.setAttribute('aria-label', 'mute');
+                
+                // Optional: if video is paused due to autoplay failure, play it
+                if (video.paused) {
+                    video.play().catch(e => console.log("Play failed:", e));
+                }
+            } else {
+                // Mute
+                video.muted = true;
+                soundToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                soundToggle.setAttribute('aria-label', 'unmute');
+            }
+            
+            // Add a little scale animation for feedback
+            soundToggle.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                soundToggle.style.transform = '';
+            }, 150);
+        });
+
+        // Optional: if video ends, keep the toggle state as is (no need to change)
+        // Also, if user clicks the video itself, you could also toggle sound – 
+        // but we keep it simple, only button toggles sound.
+        
+        // For extra robustness: if the video gets paused unexpectedly (e.g., by browser)
+        // we could try to resume, but not necessary.
+    });
+})();
     </script>
 </body>
 </html>
