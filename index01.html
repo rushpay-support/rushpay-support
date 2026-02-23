@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site can't be reached</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #202124;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .sad-icon {
+        font-size: 90px;
+        color: #9aa0a6;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #9aa0a6;
+        margin: 5px 0;
+    }
+
+    .reload-btn {
+        background: #8ab4f8;
+        border: none;
+        padding: 10px 26px;
+        font-size: 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 18px;
+    }
+
+    .reload-btn:hover {
+        background: #a8c9ff;
+    }
+
+    .url {
+        color: #e8eaed;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>This site can’t be reached</h2>
+    <p><span class="url">rushpayapp.com</span>'s DNS address could not be found.</p>
+    <p>Diagnosing the problem…</p>
+    <p style="margin-top:10px; color:#9aa0a6;">DNS_PROBE_STARTED</p>
+
+    <button class="reload-btn" onclick="reloadPage()">Reload</button>
+</div>
+
+<script>
+function reloadPage() {
+    location.reload();
+}
+</script>
+
+</body>
+</html>
